@@ -49,6 +49,7 @@ export default function Registro() {
     <div className='container'>
       <div className='row'>
         <div className='col-md-3'>
+            
           <div className="card">
             <img src={User} alt="" className='estilo-user'/>
             <form onSubmit={funcAutentication}>
