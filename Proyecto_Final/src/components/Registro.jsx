@@ -48,21 +48,19 @@ export default function Registro() {
   return (
     <div className='container'>
       <div className='row'>
-        <div className='col-md-3'>
-            
+        <div className='col-md-4'>
           <div className="card">
             <img src={User} alt="" className='estilo-user'/>
             <form onSubmit={funcAutentication}>
               <input type="text" placeholder='Ingresar Email' className='caja-texto' id='email' value={email} onChange={(e) => setEmail(e.target.value)} />
               <input type="password" placeholder='Ingresar Contraseña' className='caja-texto' id='password' value={password} onChange={(e) => setPassword(e.target.value)} />
-              <button className='btnform'>{registrando ? "Registrate" : "Inicia Sesion"}</button>
-              <button style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px' }}>Botón de prueba</button>
+              <button style={{ backgroundColor: 'blueviolet', color: 'white', padding: '10px 20px', borderRadius: '5px' }}className='btnform'>{registrando ? "Registrate" : "Inicia Sesion"}</button>
             </form>
             <h4 className='texto'>{registrando? "Si ya tienes cuenta" : "No tienes cuenta"}<button className='btnswitch' onClick={() => setRegistrando(!registrando)}>{registrando? "Inicia Sesion" : "Registrate"}</button></h4>
           </div>
         </div>
         <div className='col-md-8'>
-          <img src={Imagen} alt="" className='tamaño-imagen' style={{ position: 'absolute', top: '60%', left: '70%', transform: 'translate(-50%, -50%)', width: '50%', height: '70%' }}/>
+          <img src={Imagen} alt="" className='tamaño-imagen'/>
         </div>
       </div>
     </div>
