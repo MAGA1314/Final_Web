@@ -54,7 +54,7 @@ export default function Registro() {
             <form onSubmit={funcAutentication}>
               <input type="text" placeholder='Ingresar Email' className='caja-texto' id='email' value={email} onChange={(e) => setEmail(e.target.value)} />
               <input type="password" placeholder='Ingresar Contraseña' className='caja-texto' id='password' value={password} onChange={(e) => setPassword(e.target.value)} />
-              <button style={{ backgroundColor: 'blueviolet', color: 'white', padding: '10px 20px', borderRadius: '5px' }}className='btnform'>{registrando ? "Registrate" : "Inicia Sesion"}</button>
+              <button className='btnform'>{registrando ? "Registrate" : "Inicia Sesion"}</button>
             </form>
             <h4 className='texto'>{registrando? "Si ya tienes cuenta" : "No tienes cuenta"}<button className='btnswitch' onClick={() => setRegistrando(!registrando)}>{registrando? "Inicia Sesion" : "Registrate"}</button></h4>
           </div>
