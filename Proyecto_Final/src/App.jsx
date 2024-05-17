@@ -8,6 +8,10 @@ import Registro from './components/Registro';
 import Contacto from './components/Contacto';
 import AboutUS from './components/AboutUS';
 import Navbar from './components/Navbar'; // Asegúrate de importar Navbar
+import Nombre from './components/Nombre';
+import Encabezado from './components/Encabezado';
+import Cajones from './components/cajones';
+import Productos from './components/Productos';
 
 const auth = getAuth(appFirebase);
 
@@ -29,14 +33,11 @@ function App() {
 
   return (
     <Router>
-      <Navbar correoUsuario={usuario? usuario.email : 'Invitado'} />
-        <div className='main-content'>
-          <Routes>
-            <Route path="/" element={usuario? <Inicio correoUsuario={usuario.email} /> : <Registro />} />
-            <Route path="/contacto" element={<Contacto />} />
-            <Route path="/about" element={<AboutUS />} />
-          </Routes>
-        </div>
+      <Nombre></Nombre>
+      <Encabezado></Encabezado>
+      <Productos></Productos>
+
+
     </Router>
   );
 }
