@@ -1,5 +1,5 @@
 import React from 'react'
-import Cajones from './cajones'
+import Cajones from './Cajones'
 
 export default function Productos() {
   return (

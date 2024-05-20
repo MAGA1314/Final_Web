@@ -1,6 +1,6 @@
 import React from 'react'
 import { Router } from 'react-router-dom'
-import Imagen from '..assets.mercado.jpg' 
+import Imagen from '../assets/Mercado.jpg' 
 
 export default function Nombre() {
   return (
@@ -10,7 +10,7 @@ export default function Nombre() {
   )
 };
 
-export default function Encabezado() {
+export function Encabezado() {
     return(
         <Router>
             <header>
@@ -24,5 +24,5 @@ export default function Encabezado() {
                 </div>
             </header>
         </Router>
-    )
+    );
 }
