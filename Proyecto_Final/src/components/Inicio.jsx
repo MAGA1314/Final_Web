@@ -7,49 +7,48 @@ import { get } from 'firebase/database';
 const auth = getAuth(appFirebase);
 import Registro from '../assets/Registro.jpg';
 import Usuario from '../assets/Usuario.jpg'; // Asegúrate de que la ruta sea correcta
-
+//import producto1 from '../productos/boxengasse.png'
 export const Inicio = ({ correoUsuario }) => {
   return (
     <div>
       <h1 className='text-center'>Pagina De Inicio</h1>
-      <div id="carouselExampleDark" className="carousel carousel-dark slide">
-          <div className="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <section className="contenedor">
+        {/* Contenedor de elementos */}
+        <div className="contenedor-items">
+          <div className="item">
+            <span className="titulo-item">Box Engasse</span>
+            <img src={Registro} alt="Box Engasse" className="img-item" />
+            <span className="precio-item">$15.000</span>
+            <button className="boton-item">Agregar al Carrito</button>
           </div>
-          <div className="carousel-inner" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <div className="carousel-item active" data-bs-interval="6000">
-              <img src="./" alt="..." /> {/* Aquí está la corrección */}
-              <div className="carousel-caption d-none d-md-block" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div className="carousel-item" data-bs-interval="2000">
-              <img src={Usuario} style={{ width: '20%', height: 'auto' }} alt="..." /> {/* Aquí está la corrección */}
-              <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img src={Registro} style={{ width: '20%', height: 'auto' }} alt="..." /> {/* Aquí está la corrección */}
-              <div className="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
+          {/* Repite el patrón anterior para cada producto */}
+          <div className="item">
+            <span className="titulo-item">English Horse</span>
+            <img src={Usuario} alt="English Horse" className="img-item" />
+            <span className="precio-item">$25.000</span>
+            <button className="boton-item">Agregar al Carrito</button>
           </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
+          {/* Continúa agregando productos según corresponda */}
         </div>
+        {/* Carrito de Compras */}
+        <div className="carrito" id="carrito">
+          <div className="header-carrito">
+            <h2>Tu Carrito</h2>
+          </div>
+          <div className="carrito-items">
+            {/* Aquí irían los elementos del carrito, pero se dejó vacío para simplificar */}
+          </div>
+          <div className="carrito-total">
+            <div className="fila">
+              <strong>Tu Total</strong>
+              <span className="carrito-precio-total">
+                $120.000,00
+              </span>
+            </div>
+            <button className="btn-pagar">Pagar <i className="fas fa-shopping-cart"></i></button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

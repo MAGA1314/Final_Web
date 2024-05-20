@@ -11,7 +11,7 @@ import Navbar from './components/Navbar'; // Asegúrate de importar Navbar
 import Nombre from './components/Nombre';
 import Encabezado from './components/Encabezado';
 import Cajones from './components/Cajones';
-import Productos from './components/Productos';
+import Productos from './components/Carrito';
 
 const auth = getAuth(appFirebase);
 
