@@ -232,7 +232,7 @@ header h1{
     top: 0;
     transition: .3s;
     /* Estilos para ocultar */
-    margin-right: -100%;
+    /* margin-right: -100%; */
     opacity: 0;
 }
 .carrito .header-carrito{
