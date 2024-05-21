@@ -342,6 +342,15 @@ header h1{
     }
   }
 
+  .card-container {
+    display: flex; /* Habilita Flexbox */
+    justify-content: space-around; /* Distribuye espacio uniformemente entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea si no caben en la misma */
+  }
+  
+  .card {
+    margin-bottom: 1rem; /* Añade un margen inferior a cada tarjeta para separarlas verticalmente */
+  }
 
 
 
