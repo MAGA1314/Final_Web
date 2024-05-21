@@ -133,6 +133,16 @@
   margin-right: 20px; /* Añade un poco de espacio entre los elementos del navbar 
 }  */
 
+.card-container {
+  display: flex; /* Habilita Flexbox */
+  justify-content: space-around; /* Distribuye espacio uniformemente entre las tarjetas */
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea si no caben en la misma */
+}
+
+.card {
+  margin-bottom: 1rem; /* Añade un margen inferior a cada tarjeta para separarlas verticalmente */
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
 *{
     margin: 0;
@@ -341,18 +351,4 @@ header h1{
         width: 100%;
     }
   }
-
-  .card-container {
-    display: flex; /* Habilita Flexbox */
-    justify-content: space-around; /* Distribuye espacio uniformemente entre las tarjetas */
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea si no caben en la misma */
-  }
-  
-  .card {
-    margin-bottom: 1rem; /* Añade un margen inferior a cada tarjeta para separarlas verticalmente */
-  }
-
-
-
-
 
