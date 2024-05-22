@@ -6,7 +6,7 @@ const Carrito = ({ carrito, setCarrito }) => {
 
   const sumarCantidad = (titulo) => {
     setCarrito(prevCarrito =>
-      prevCarrito.map(item => 
+      prevCarrito.map(item =>
         item.titulo === titulo? {...item, cantidad: item.cantidad + 1 } : item
       )
     );
@@ -14,7 +14,7 @@ const Carrito = ({ carrito, setCarrito }) => {
 
   const restarCantidad = (titulo) => {
     setCarrito(prevCarrito =>
-      prevCarrito.map(item => 
+      prevCarrito.map(item =>
         item.titulo === titulo && item.cantidad > 1? {...item, cantidad: item.cantidad - 1 } : item
       )
     );
@@ -36,11 +36,12 @@ const Carrito = ({ carrito, setCarrito }) => {
               <span>${item.precio}</span>
               <button onClick={() => eliminarItem(item.titulo)}>Eliminar</button>
             </div>
+            
           </div>
+          
         ))}
       </div>
     </div>
   );
 };
-
 export default Carrito;
