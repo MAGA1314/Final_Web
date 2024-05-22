@@ -34,7 +34,7 @@ const Carrito = ({ carrito, setCarrito }) => {
                 <button onClick={() => sumarCantidad(item.titulo)}>+</button>
               </div>
               <span>${item.precio}</span>
-              <button onClick={() => eliminarItem(item.titulo)}>Eliminar</button>
+              <button className="btn-eliminar" onClick={() => eliminarItem(item.titulo)}>Eliminar</button>
             </div>
             
           </div>

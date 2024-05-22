@@ -316,30 +316,58 @@ header h1{
     border: 1px solid #000;
     cursor: pointer;
 }
+/* Estilos generales para los botones de incremento y decremento */
+.selector-cantidad button {
+  background-color: #ffffff; /* Color de fondo blanco */
+  color: #333333; /* Color del texto oscuro */
+  border: none; /* Elimina el borde predeterminado */
+  padding: 5px 10px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.selector-cantidad button:hover {
+  background-color: #ddd; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilos específicos para el botón de incremento (+) */
+.selector-cantidad button:first-child {
+  border-radius: 5px 0 0 5px; /* Redondea los bordes izquierdo y derecho */
+}
+
+/* Estilos específicos para el botón de decremento (-) */
+.selector-cantidad button:last-child {
+  border-radius: 0 5px 5px 0; /* Redondea los bordes derecho e izquierdo */
+}
 .carrito .carrito-item .carrito-item-precio{
     font-weight: bold;
     display: inline-block;
     font-size: 18px;
     margin-bottom: 5px;
 }
-.carrito .carrito-item .btn-eliminar{
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    color: #000;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid #000;
-    cursor: pointer;
-    display: block;
-    background: transparent;
-    z-index: 20;
+/* Asegúrate de que el contenedor tenga una posición relativa */
+.carrito-item {
+  position: relative;
 }
-.carrito .carrito-item .btn-eliminar i{
+
+/* Aplica los estilos al botón "Eliminar" usando la clase correcta */
+.carrito-item.btn-eliminar {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #000;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #000;
+  cursor: pointer;
+  display: block;
+  background: transparent;
+  z-index: 20;
+}
+.carrito.carrito-item.btn-eliminar i {
     pointer-events: none;
 }
 
