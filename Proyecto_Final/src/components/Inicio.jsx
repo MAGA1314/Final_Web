@@ -15,6 +15,8 @@ import celular7 from '../assets/celular7.jpg';
 import celular8 from '../assets/celular8.jpg';
 import celular9 from '../assets/celular9.jpg';
 
+import eliminar from '../assets/Eliminar.png';
+
 const auth = getAuth(appFirebase);
 
 const Inicio = ({ correoUsuario }) => {

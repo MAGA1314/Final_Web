@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
 .padre{
   display: flex;
   align-items: center;
@@ -143,7 +145,6 @@
   margin-bottom: 1rem; /* Añade un margen inferior a cada tarjeta para separarlas verticalmente */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
 *{
     margin: 0;
     padding:0;
@@ -305,9 +306,11 @@ header h1{
     width:30px;
     padding: 5px;
     text-align: center;
+    
 }
 .carrito .carrito-item .selector-cantidad i{
     font-size: 18px;
+    font-weight: bold;
     width: 32px;
     height: 32px;
     line-height: 32px;
@@ -349,26 +352,45 @@ header h1{
   position: relative;
 }
 
-/* Aplica los estilos al botón "Eliminar" usando la clase correcta */
-.carrito-item.btn-eliminar {
+.carrito .carrito-item .btn-eliminar {
   position: absolute;
   right: 15px;
   top: 15px;
-  color: #000;
-  font-size: 20px;
   width: 40px;
   height: 40px;
-  line-height: 40px;
-  text-align: center;
   border-radius: 50%;
   border: 1px solid #000;
+  background: red;
   cursor: pointer;
-  display: block;
-  background: transparent;
-  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.carrito.carrito-item.btn-eliminar i {
-    pointer-events: none;
+
+.carrito .carrito-item .btn-eliminar .x-icon {
+  font-size: 20px;
+  color: #fff;
+  line-height: 1; /* Ensure that the text is centered */
+}
+
+.selector-cantidad button {
+  background-color: #ffffff;
+  color: #333333;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.selector-cantidad button:hover {
+  background-color: #ddd;
+}
+
+.selector-cantidad button:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.selector-cantidad button:last-child {
+  border-radius: 0 5px 5px 0;
 }
 
 .carrito-total{

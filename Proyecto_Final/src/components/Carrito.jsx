@@ -1,13 +1,14 @@
-// Carrito.jsx
+import React from 'react';
+
 const Carrito = ({ carrito, setCarrito }) => {
   const eliminarItem = (titulo) => {
-    setCarrito(prevCarrito => prevCarrito.filter(item => item.titulo!== titulo));
+    setCarrito(prevCarrito => prevCarrito.filter(item => item.titulo !== titulo));
   };
 
   const sumarCantidad = (titulo) => {
     setCarrito(prevCarrito =>
       prevCarrito.map(item =>
-        item.titulo === titulo? {...item, cantidad: item.cantidad + 1 } : item
+        item.titulo === titulo ? { ...item, cantidad: item.cantidad + 1 } : item
       )
     );
   };
@@ -15,7 +16,7 @@ const Carrito = ({ carrito, setCarrito }) => {
   const restarCantidad = (titulo) => {
     setCarrito(prevCarrito =>
       prevCarrito.map(item =>
-        item.titulo === titulo && item.cantidad > 1? {...item, cantidad: item.cantidad - 1 } : item
+        item.titulo === titulo && item.cantidad > 1 ? { ...item, cantidad: item.cantidad - 1 } : item
       )
     );
   };
@@ -34,14 +35,15 @@ const Carrito = ({ carrito, setCarrito }) => {
                 <button onClick={() => sumarCantidad(item.titulo)}>+</button>
               </div>
               <span>${item.precio}</span>
-              <button className="btn-eliminar" onClick={() => eliminarItem(item.titulo)}>Eliminar</button>
+              <div className="btn-eliminar">
+                <button onClick={() => eliminarItem(item.titulo)}>X</button>
+              </div>
             </div>
-            
           </div>
-          
         ))}
       </div>
     </div>
   );
 };
+
 export default Carrito;
